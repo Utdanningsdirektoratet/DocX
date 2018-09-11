@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net471</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
@@ -19,27 +19,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="documents\**\*" CopyToOutputDirectory="Always" />
-    <!-- <None Include="documents\EverybodyHasAHome.docx" />
-    <None Include="documents\FontFormat.docx" />
-    <None Include="documents\Hyperlinks.docx" />
-    <None Include="documents\Images.docx" />
-    <None Include="documents\MovePicture.docx" />
-    <None Include="documents\Paragraphs.docx" />
-    <None Include="documents\ReplaceTests.docx" />
-    <None Include="documents\Tables.docx" />
-    <None Include="documents\Template.dotx" />
-    <None Include="documents\testdoc_OrderedList.docx" />
-    <None Include="documents\testdoc_OrderedUnorderedLists.docx" />
-    <None Include="documents\testdoc_SectionsWithHeadingBreaks.docx" />
-    <None Include="documents\testdoc_SectionsWithSectionBreaks.docx" />
-    <None Include="documents\testdoc_SectionsWithSectionBreaksMultiParagraph.docx" />
-    <None Include="documents\testdoc_UnorderedList.docx" />
-    <None Include="documents\TestParent.docx" />
-    <None Include="documents\VariousTextFormatting.docx" />
-    <Content Include="documents\green.jpg" />
-    <Content Include="documents\orange.gif" />
-    <Content Include="documents\purple.png" />
-    <Content Include="documents\red.bmp" />
-    <Content Include="documents\yellow.tif" /> -->
   </ItemGroup>
 </Project>
