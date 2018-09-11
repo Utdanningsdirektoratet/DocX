@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
+    <NoWarn>$(NoWarn);CS0109</NoWarn>
     <RootNamespace>Novacode</RootNamespace>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <VersionPrefix>2.0.0</VersionPrefix>
