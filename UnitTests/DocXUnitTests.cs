@@ -35,7 +35,7 @@ namespace UnitTests
             Setup(_directoryDocuments); // prepare temp documents directory 
             RelativeDirectory rd = new RelativeDirectory(); // prepares the files for testing
             rd.Up(3);
-            _directoryWithFiles = rd.Path + @"\UnitTests\documents\";
+            _directoryWithFiles = rd.Path + @"\documents\";
         }
         private static void Setup(string path)
         {
