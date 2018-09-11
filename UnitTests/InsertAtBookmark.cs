@@ -1,15 +1,13 @@
 ﻿using System;
 using Novacode;
 using System.Linq;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class InsertAtBookmark
     {
-        [TestMethod]
+        [Fact]
         public void Inserting_at_bookmark_should_add_text_in_paragraph()
         {
             using (var document = DocX.Create(""))
@@ -20,12 +18,12 @@ namespace UnitTests
 
                 document.InsertAtBookmark("world", "bookmark1");
 
-                Assert.AreEqual("Hello world!", document.Text);
+                Assert.Equal("Hello world!", document.Text);
 
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void Inserting_at_bookmark_should_add_text_in_header()
         {
             using (var document = DocX.Create(""))
@@ -38,12 +36,12 @@ namespace UnitTests
 
                 document.InsertAtBookmark("world", "bookmark1");
 
-                Assert.AreEqual("Hello world!", String.Join("", header.Paragraphs.Select(x=>x.Text)));
+                Assert.Equal("Hello world!", String.Join("", header.Paragraphs.Select(x=>x.Text)));
 
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void Inserting_at_bookmark_should_add_text_in_footer()
         {
             using (var document = DocX.Create(""))
@@ -56,7 +54,7 @@ namespace UnitTests
 
                 document.InsertAtBookmark("world", "bookmark1");
 
-                Assert.AreEqual("Hello world!", String.Join("", footer.Paragraphs.Select(x => x.Text)));
+                Assert.Equal("Hello world!", String.Join("", footer.Paragraphs.Select(x => x.Text)));
 
             }
         }
