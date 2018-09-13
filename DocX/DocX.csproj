@@ -4,13 +4,16 @@
     <NoWarn>$(NoWarn);CS0109</NoWarn>
     <RootNamespace>Novacode</RootNamespace>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <VersionPrefix>2.0.0</VersionPrefix>
+    <VersionPrefix>2.1.0</VersionPrefix>
     <Company>Udir</Company>
     <Product>Novacode.DocX</Product>
     <Authors>BEKK</Authors>
     <PackageTags>Word</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>false</IncludeSource>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <RepositoryUrl>https://github.com/Utdanningsdirektoratet/docx</RepositoryUrl>
     <PackageIconUrl>https://udiretfdeploy.blob.core.windows.net/public/Happy.PNG</PackageIconUrl>
     <PackageReleaseNotes>
@@ -22,6 +25,9 @@
     <Reference Include="System.XML" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="_Extensions.cs">

@@ -1,3 +1,7 @@
+# 2.1.0
+
+* Legger til SourceLink-støtte
+
 # 2.0.0
 
 * Flytter fork fra kjohann/docx til udir.
