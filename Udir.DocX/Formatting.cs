@@ -102,14 +102,18 @@ namespace Novacode
                         formatting.Size = Int32.Parse(
                             option.GetAttribute(XName.Get("val", DocX.w.NamespaceName))) / 2; 
                         break;
-                   
-
                     case "rFonts":
                         var fontFamilyName = option.GetAttribute(XName.Get("cs", DocX.w.NamespaceName), null) ??
                             option.GetAttribute(XName.Get("ascii", DocX.w.NamespaceName), null) ??
                                 option.GetAttribute(XName.Get("hAnsi", DocX.w.NamespaceName), null) ??
                                     option.GetAttribute(XName.Get("eastAsia", DocX.w.NamespaceName), null);
-                        formatting.FontFamily = fontFamilyName != null ? new FontFamily(fontFamilyName) : null;
+                        try
+                        {
+                            formatting.FontFamily = fontFamilyName != null ? new FontFamily(fontFamilyName) : null;
+                        } catch (ArgumentException e )
+                        {
+                           // Ignore this exception and use a default formatter
+                        }
                         break;
                     case "color" :
                         try
@@ -122,9 +126,7 @@ namespace Novacode
                     case "vanish": formatting.hidden = true; break;
                     case "b": formatting.Bold = true; break;
                     case "i": formatting.Italic = true; break;
-                    case "u": formatting.UnderlineStyle = HelperFunctions.GetUnderlineStyle(option.GetAttribute(XName.Get("val", DocX.w.NamespaceName)));
-                              break;
-                    default: break;
+                    case "u": formatting.UnderlineStyle = HelperFunctions.GetUnderlineStyle(option.GetAttribute(XName.Get("val", DocX.w.NamespaceName))); break;
                 }
             }
 
