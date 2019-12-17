@@ -1487,7 +1487,6 @@ namespace Novacode
                 try
                 {
                     return HelperFunctions.GetFormattedText(Xml);
-
                 }
                 catch (Exception)
                 {

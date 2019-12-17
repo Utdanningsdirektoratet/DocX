@@ -118,7 +118,7 @@ namespace Novacode
                     last = alist.Last();
 
                 // Join adjacent runs that have the same formatting and do not cross a hyperlink boundary (they must both be inside a hyperlink or both be outside)
-                if (last != null && last.CompareTo(ft) == 0 && (last.containingHyperlinkId == null) == (ft.containingHyperlinkId == null))
+                if (last != null && last.CompareTo(ft) == 0 && (last.containingHyperlinkId == null) == (ft.containingHyperlinkId == null) && ft.footnoteId == null)
                 {
                     // Update text of last entry.
                     last.text += ft.text;
